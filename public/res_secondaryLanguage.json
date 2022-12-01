@@ -1,0 +1,112 @@
+{
+  "basic_info": {
+    "description_header": "வணக்கம்!",
+    "description": "நான் திலக் ரமணீ.நான் Angular, React மற்றும் Vue போன்ற மிகவும் பிரபலமான முன்-இறுதி வலை கட்டமைப்புகளுடன் பணிபுரிகிறேன். எனக்கு ஒரு வருட தொழில் நிபுணத்துவம் உள்ளது மற்றும் நல்ல வலை பயன்பாடுகளை உருவாக்க எதிர்நோக்குகிறேன்! இறுதி தொழில்நுட்பங்களை முற்போக்கான கற்றலில் நான் ஈடுபட்டுள்ளேன்.",
+    "section_name": {
+      "about": "என்னை பற்றி",
+      "projects": "திட்டங்கள்",
+      "skills": "திறன்கள்",
+      "experience": "அனுபவம்"
+    }
+  },
+  "projects": [
+    {
+      "title": "SIAPP",
+      "startDate": "2021",
+      "description": "சவாலான தொழில்நுட்பத்தில், பணிபுரியும் பாக்கியம் எனக்கு கிடைத்தது.இது Angular மற்றும் nodejs உடன் உருவாக்கப்பட்டது, மானிட்டராக இயங்கும் C++ பயன்பாடு மூலம் தரவு அனுப்பப்படுகிறது.இணைய பயன்பாடு இதையொட்டி தொடர்புகொண்டு வெளிப்புற சக்தி வரம்பை அமைக்கிறது",
+      "images": [
+        "images/portfolio/siapp/siapp1.png",
+        "images/portfolio/siapp/siapp2.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-angularjs-plain",
+          "name": "Angular"
+        },
+        {
+          "class": "devicon-nodejs-plain",
+          "name": "Node.js"
+        },
+        {
+          "class": "devicon-cplusplus-plain",
+          "name": "C++"
+        }
+      ]
+    },
+    {
+      "title": "வெர்சிசார்ஜ்",
+      "startDate": "2022",
+      "description": "வெர்சிசார்ஜ் என்பது ஒரு ஏசி எலக்ட்ரிக் வாகன சார்ஜர் ஆகும், இது OCPP-NG எனப்படும் செருகுநிரலுடன் உருவாக்கப்பட்டது.இந்த ஃபார்ம்வேர் மேம்பாட்டின் நோக்கம் துல்லியமான மீட்டர் மதிப்புகளை வழங்குவது, பல்வேறு முறைகளுக்கு இடையில் மாறுவது மற்றும் வாடிக்கையாளர்களின் பயன்பாட்டின் அடிப்படையில் பில் செய்வது. காரை சார்ஜ் செய்வதற்கான முன்பதிவு போன்ற பல செயல்பாடுகளை இது வழங்குகிறது.",
+      "images": [
+        "images/portfolio/versicharge/versicharge2.jpg",
+        "images/portfolio/versicharge/versicharge1.png"
+      ],
+      "url": "",
+      "technologies": [
+        {
+          "class": "devicon-cplusplus-plain",
+          "name": "C++"
+        },
+        {
+          "class": "devicon-nodejs-plain",
+          "name": "Node.js"
+        }
+      ]
+    },
+    {
+      "title": "இது முடிவல்ல!",
+      "startDate": "",
+      "description": "மற்ற திட்டங்களை விரைவில் செயல்படுத்துவேன்"
+    }
+  ],
+  "experience": [
+    {
+      "company": "சீமென்ஸ்",
+      "title": "நிலைபொருள் டெவலப்பர்",
+      "years": "04.2022 - தற்போது",
+      "mainTech": [
+        "CPP & Python"
+      ],
+      "technologies": [
+        "OCPP-NG",
+        "Syslog-NG",
+        "Linux"
+      ],
+      "mainClass":"python"
+    },
+    {
+      "company": "சீமென்ஸ்",
+      "title": "பயனர் இடைமுக டெவலப்பர்",
+      "years": "12.2021 - 03.2022",
+      "mainTech": [
+        "Angular 10/11"
+      ],
+      "technologies": [
+        "Angular Material",
+        "REST API",
+        "RxJS",
+        "JavaScript",
+        "Bootstrap",
+        "MDBootstrap",
+        "Docker"
+      ],
+      "mainClass":"angular"
+    },
+    {
+      "company": "ஆப்டீன்",
+      "title": "இன்டர்ன்ஷிப்",
+      "years": "02.2021 - 07.2021",
+      "mainTech": [
+        "Java"
+      ],
+      "technologies": [
+        "Selenium",
+        "TestComplete",
+        "Sikuli",
+        "JavaScript"
+      ],
+      "mainClass":"java"
+    }
+  ]
+}

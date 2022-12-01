@@ -1,0 +1,112 @@
+{
+    "basic_info": {
+      "description_header": "Hey!",
+      "description": "I'm Thilak Ramanie. I'm working with most popular front-end web frameworks like Angular, React and Vue. I have an year of industry expertise and looking forward to develop crazy stuffs! Involved in progressive learning of back-end technologies to convert myself into a Full-Stack <dev/>",
+      "section_name": {
+        "about": "About me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "SIAPP",
+        "startDate": "2021",
+        "description": "Challenging application, I had privilege to work with.It was developed with angular and node.js, where the data gets sent by a C++ application running as monitor.The web application in-turn interacts and sets the external power limit",
+        "images": [
+          "images/portfolio/siapp/siapp1.png",
+          "images/portfolio/siapp/siapp2.png"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-nodejs-plain",
+            "name": "Node.js"
+          },
+          {
+            "class": "devicon-cplusplus-plain",
+            "name": "C++"
+          }
+        ]
+      },
+      {
+        "title": "Versicharge",
+        "startDate": "2022",
+        "description": "Versicharge is an AC electric vehicle charger, developed with a plugin called OCPP-NG.The purpose of this firmware development is to provide accurate meter values ,switch between various modes, and to bill the customers on the basis of their usage. It serves whole lot of functionalities like reservation to put charge and etc.",
+        "images": [
+          "images/portfolio/versicharge/versicharge2.jpg",
+          "images/portfolio/versicharge/versicharge1.png"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-cplusplus-plain",
+            "name": "C++"
+          },
+          {
+            "class": "devicon-nodejs-plain",
+            "name": "Node.js"
+          }
+        ]
+      },
+      {
+        "title": "Yet to develop more",
+        "startDate": "",
+        "description": "Developing other projects real soon"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Siemens",
+        "title": "Firmware Developer",
+        "years": "04.2022 - Present",
+        "mainTech": [
+          "CPP & Python"
+        ],
+        "technologies": [
+          "OCPP-NG",
+          "Syslog-NG",
+          "Linux"
+        ],
+        "mainClass":"python"
+      },
+      {
+        "company": "Siemens",
+        "title": "Front-End Developer",
+        "years": "12.2021 - 03.2022",
+        "mainTech": [
+          "Angular 10/11"
+        ],
+        "technologies": [
+          "Angular Material",
+          "REST API",
+          "RxJS",
+          "JavaScript",
+          "Bootstrap",
+          "MDBootstrap",
+          "Docker"
+        ],
+        "mainClass":"angular"
+      },
+      {
+        "company": "Aptean",
+        "title": "Intern",
+        "years": "02.2021 - 07.2021",
+        "mainTech": [
+          "Java"
+        ],
+        "technologies": [
+          "Selenium",
+          "TestComplete",
+          "Sikuli",
+          "JavaScript"
+        ],
+        "mainClass":"java"
+      }
+    ]
+  }
