@@ -62,18 +62,19 @@
   ],
   "experience": [
     {
-      "company": "சீமென்ஸ்",
-      "title": "நிலைபொருள் டெவலப்பர்",
-      "years": "04.2022 - தற்போது",
+      "company": "ஆப்டீன்",
+      "title": "இன்டர்ன்ஷிப்",
+      "years": "02.2021 - 07.2021",
       "mainTech": [
-        "CPP & Python"
+        "Java"
       ],
       "technologies": [
-        "OCPP-NG",
-        "Syslog-NG",
-        "Linux"
+        "Selenium",
+        "TestComplete",
+        "Sikuli",
+        "JavaScript"
       ],
-      "mainClass":"python"
+      "mainClass":"java"
     },
     {
       "company": "சீமென்ஸ்",
@@ -94,19 +95,18 @@
       "mainClass":"angular"
     },
     {
-      "company": "ஆப்டீன்",
-      "title": "இன்டர்ன்ஷிப்",
-      "years": "02.2021 - 07.2021",
+      "company": "சீமென்ஸ்",
+      "title": "நிலைபொருள் டெவலப்பர்",
+      "years": "04.2022 - தற்போது",
       "mainTech": [
-        "Java"
+        "CPP & Python"
       ],
       "technologies": [
-        "Selenium",
-        "TestComplete",
-        "Sikuli",
-        "JavaScript"
+        "OCPP-NG",
+        "Syslog-NG",
+        "Linux"
       ],
-      "mainClass":"java"
+      "mainClass":"python"
     }
   ]
 }
