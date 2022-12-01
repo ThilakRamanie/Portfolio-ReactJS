@@ -62,18 +62,19 @@
     ],
     "experience": [
       {
-        "company": "Siemens",
-        "title": "Firmware Developer",
-        "years": "04.2022 - Present",
+        "company": "Aptean",
+        "title": "Intern",
+        "years": "02.2021 - 07.2021",
         "mainTech": [
-          "CPP & Python"
+          "Java"
         ],
         "technologies": [
-          "OCPP-NG",
-          "Syslog-NG",
-          "Linux"
+          "Selenium",
+          "TestComplete",
+          "Sikuli",
+          "JavaScript"
         ],
-        "mainClass":"python"
+        "mainClass":"java"
       },
       {
         "company": "Siemens",
@@ -94,19 +95,18 @@
         "mainClass":"angular"
       },
       {
-        "company": "Aptean",
-        "title": "Intern",
-        "years": "02.2021 - 07.2021",
+        "company": "Siemens",
+        "title": "Firmware Developer",
+        "years": "04.2022 - Present",
         "mainTech": [
-          "Java"
+          "CPP & Python"
         ],
         "technologies": [
-          "Selenium",
-          "TestComplete",
-          "Sikuli",
-          "JavaScript"
+          "OCPP-NG",
+          "Syslog-NG",
+          "Linux"
         ],
-        "mainClass":"java"
-      }
+        "mainClass":"python"
+      }     
     ]
   }
