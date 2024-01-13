@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import "./Home.css";
 
 const Home = () => {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const [loading, setLoading] = useState(true);
   const setThemeHandler = () => {
     setTheme(!theme);
