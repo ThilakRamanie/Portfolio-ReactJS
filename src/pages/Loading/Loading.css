@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 body {
-  background: #000;
+  background: #000 !important;
   scrollbar-width: none;
 }
 
@@ -15,7 +15,7 @@ body {
   text-transform: uppercase;
   animation: stroke 2s alternate;
   stroke-width: 2;
-  stroke: #365fa0;
+  stroke: #365fa0 !important;
   font-size: 140px;
   animation-fill-mode: forwards;
 }
@@ -25,7 +25,7 @@ body {
 }
 
 .loading .audio-icon {
-  background-color: white;
+  background-color: white !important;
   position: absolute;
   bottom: 5%;
   right: 5%;
