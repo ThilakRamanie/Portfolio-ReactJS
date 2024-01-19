@@ -1,4 +1,4 @@
-import Img from "../assets/profile_img.webp";
+// import Img from "../assets/profile_img.webp";
 import { MdWork, MdSchool } from "react-icons/md";
 import Timeline from "./Timeline";
 
