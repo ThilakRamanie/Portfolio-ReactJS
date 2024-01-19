@@ -47,7 +47,7 @@ const Experience = () => {
                   <FaCheckCircle className="icon" />
                   <div>
                     <h3>Node.js</h3>
-                    <p>Experiences</p>
+                    <p>Experienced</p>
                   </div>
                 </article>
                 <article>

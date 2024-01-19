@@ -7,8 +7,17 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--primary-bg-color);
 }
 
 html {
   scroll-behavior: smooth;
 }
+
+.light-theme {
+  --primary-bg-color: white;
+}
+
+.dark-theme {
+  --primary-bg-color: black;
+}/*# sourceMappingURL=index.css.map */

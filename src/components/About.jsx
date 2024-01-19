@@ -1,5 +1,6 @@
 import Img from "../assets/profile_img.webp";
 import { MdWork, MdSchool } from "react-icons/md";
+import Timeline from "./Timeline";
 
 const About = () => {
   return (
@@ -8,9 +9,6 @@ const About = () => {
         <p className="section__text__p1">Get To Know More</p>
         <h1 className="title">About Me</h1>
         <div className="section-container">
-          <div className="section__pic-container">
-            <img src={Img} alt="Profile picture" className="about-pic" />
-          </div>
           <div className="about-details-container">
             <div className="about-containers">
               <div className="details-container">
@@ -41,6 +39,10 @@ const About = () => {
                 to impactful software development projects.
               </p>
             </div>
+          </div>
+          <div className="section__pic-container">
+            {/* <img src={Img} alt="Profile picture" className="about-pic" /> */}
+            <Timeline />
           </div>
         </div>
       </section>
