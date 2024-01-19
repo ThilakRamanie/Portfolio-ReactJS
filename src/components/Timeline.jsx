@@ -8,7 +8,7 @@ const Timeline = () => {
             <p className="tl-title">Harrier Systems</p>
             <p className="tl-company-title">System Engineer(part-time)</p>
             <time className="tl-time" dateTime="2023-06-20">
-              October 2023 - July 2023
+              October 2023 - Present
             </time>
           </div>
         </div>
@@ -18,7 +18,7 @@ const Timeline = () => {
             <p className="tl-title">ScribeEMR</p>
             <p className="tl-company-title">Software Developer</p>
             <time className="tl-time" dateTime="2023-06-18">
-              January 2023 - Present
+              January 2023 - July 2023
             </time>
           </div>
         </div>
