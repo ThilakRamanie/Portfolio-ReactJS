@@ -34,7 +34,7 @@ const Profile = () => {
               className="icon"
               onClick={() => {
                 window.location.href =
-                  "https://www.linkedin.com/in/thilak-ramanie-153a27144/";
+                  "https://www.linkedin.com/in/thilak-ramanie-shanmugasundaram-153a27144/";
               }}
             />
             <FaGithub
