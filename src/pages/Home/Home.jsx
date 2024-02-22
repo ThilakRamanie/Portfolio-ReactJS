@@ -10,6 +10,7 @@ import Footer from "../../components/Footer";
 import Mode from "../../components/mode/mode";
 import Testimonials from "../../components/Testimonials";
 import { motion } from "framer-motion";
+import UserCount from "../../components/userCount";
 
 import "./Home.css";
 
@@ -49,6 +50,9 @@ const Home = () => {
             <Footer />
             <div className="switch-mode">
               <Mode setThemeHandler={setThemeHandler} />
+            </div>
+            <div className="user-count">
+              <UserCount />
             </div>
           </div>
         </motion.div>

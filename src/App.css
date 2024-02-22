@@ -20,6 +20,26 @@ html::-webkit-scrollbar {
   background-color: transparent;
 }
 
+.user-count {
+  position: fixed;
+  bottom: 10%;
+  left: 5%;
+  height: 40px;
+  width: 100px;
+  background-color: transparent;
+}
+
+.usercount-component {
+  background-color: var(--text-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
 .light-theme {
   --primary-bg-color: white;
   --text-color: black;
@@ -30,7 +50,7 @@ html::-webkit-scrollbar {
   --btn-color-2: rgb(53, 53, 53);
   --icon-color: black;
   --timeline-text: green;
-  --timeline-dot:limegreen;
+  --timeline-dot: limegreen;
 }
 
 .dark-theme {
@@ -43,8 +63,7 @@ html::-webkit-scrollbar {
   --btn-color-2: white;
   --icon-color: white;
   --timeline-text: gold;
-  --timeline-dot:rgb(255, 222, 37);
-
+  --timeline-dot: rgb(255, 222, 37);
 }
 
 * {
@@ -384,7 +403,7 @@ section {
   border: var(--btn-color-2) 0.1rem solid;
   border-radius: 1rem;
   border-color: rgb(163, 163, 163);
-  padding: 0 1em; 
+  padding: 0 1em;
   margin: 0 auto;
   height: 450px;
 }
