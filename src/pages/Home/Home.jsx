@@ -1,5 +1,5 @@
 import Loading from "../Loading/Loading";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Profile from "../../components/Profile";
 import About from "../../components/About";
@@ -10,11 +10,12 @@ import Footer from "../../components/Footer";
 import Mode from "../../components/mode/mode";
 import Testimonials from "../../components/Testimonials";
 import { motion } from "framer-motion";
+import UserCount from "../../components/userCount";
 
 import "./Home.css";
 
 const Home = () => {
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const [loading, setLoading] = useState(true);
   const setThemeHandler = () => {
     setTheme(!theme);
@@ -49,6 +50,9 @@ const Home = () => {
             <Footer />
             <div className="switch-mode">
               <Mode setThemeHandler={setThemeHandler} />
+            </div>
+            <div className="user-count">
+              <UserCount />
             </div>
           </div>
         </motion.div>

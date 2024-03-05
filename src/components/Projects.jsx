@@ -49,7 +49,7 @@ const Projects = () => {
                     className="btn card_btn"
                     onClick={() => {
                       window.location.href =
-                        "https://65a20c2148eafc77efa3a11b--papaya-fenglisu-069384.netlify.app/";
+                        "https://thilakramanie-projects.netlify.app/";
                     }}
                   >
                     More&nbsp;&nbsp;&gt;&gt;
