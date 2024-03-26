@@ -2,13 +2,23 @@ const Timeline = () => {
   return (
     <main className="timeline-container">
       <div className="timeline">
+      <div className="tl-content tl-content-active">
+          <div className="tl-header">
+            <span className="tl-marker"></span>
+            <p className="tl-title">ScribeEMR</p>
+            <p className="tl-company-title">Front-end developer(part-time)</p>
+            <time className="tl-time" dateTime="2023-06-20">
+              March 2024 - Current
+            </time>
+          </div>
+        </div>
         <div className="tl-content tl-content-active">
           <div className="tl-header">
             <span className="tl-marker"></span>
             <p className="tl-title">Harrier Systems</p>
-            <p className="tl-company-title">System Engineer(part-time)</p>
+            <p className="tl-company-title">Front-end developer(part-time)</p>
             <time className="tl-time" dateTime="2023-06-20">
-              October 2023 - Present
+              October 2023 - Feb 2024
             </time>
           </div>
         </div>
