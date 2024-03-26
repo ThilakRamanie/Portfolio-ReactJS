@@ -12,7 +12,7 @@ const Timeline = () => {
             </time>
           </div>
         </div>
-        <div className="tl-content tl-content-active">
+        <div className="tl-content">
           <div className="tl-header">
             <span className="tl-marker"></span>
             <p className="tl-title">Harrier Systems</p>
