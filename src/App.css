@@ -1246,3 +1246,54 @@ footer p {
   color: var(--primary-bg-color);
   margin: 0 0.5em;
 }
+
+.music-flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: inherit !important;
+}
+
+.music-name,
+.music-name p {
+  color: var(--helper-text);
+  width: 100%;
+  text-align: center;
+  background-color: inherit !important;
+}
+
+.music-icons,
+.music-icons i,
+.music-icons svg {
+  background-color: inherit !important;
+  color: var(--primary-bg-color);
+}
+.music-icons {
+  padding: 0 1em;
+}
+.music-icons i,
+.music-icons svg {
+  text-align: center;
+}
+
+.music-icons i {
+  transform: scale(1.8, 1.8);
+}
+
+.music-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utils_notes textarea{
+  width: 95% !important;
+}
+
+@media (min-width:300px) {
+  .cards-util {
+    justify-content: center !important;
+  }
+}

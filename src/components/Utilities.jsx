@@ -1,24 +1,19 @@
-// import Img from "../assets/profile_img.webp";
-// import { MdWork, MdSchool } from "react-icons/md";
-
-import { useState } from "react";
-// let currentSongIndex = -1;
+import { useState, useEffect } from "react";
+let currentSongIndex = -1;
+let playlist = [];
+let audioPlayer = new Audio();
 const Utilities = () => {
   const [note, setNote] = useState("");
   const [quote, setQuote] = useState(
     "Press the below button to get the quote of the day!"
   );
-  // const [song, setSong] = useState([]);
   const [passwordNumber, setPasswordNumber] = useState(0);
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState("No password yet");
   const [passwordHelper, setPasswordHelper] = useState("Minimum length is 12");
-  // const [playlist, setPlaylist] = useState([]);
-  // const audioPlayer = new Audio();
-  // const [playing, setPlaying] = useState(false);
-  // const [playingText, setPlayingText] = useState("None playing");
+  const [playing, setPlaying] = useState(false);
+  const [playingText, setPlayingText] = useState("None playing");
   const changeNote = (e) => {
     setNote(e.target.value);
-    console.log(note);
   };
   const getQuote = async () => {
     const response = await fetch("https://api.quotable.io/random");
@@ -41,66 +36,75 @@ const Utilities = () => {
       alert("Note should be at least 10 characters long.");
     }
   };
-  // const fetchPlaylist = async () => {
-  //   const clientId = "b4ac466278f542e28f8deb3c3030c703";
-  //   const clientSecret = "ecd8d7bfea1d4da596b427f1b24e5b89";
-  //   const basicAuth = btoa(`${clientId}:${clientSecret}`);
-  //   const response = await fetch("https://accounts.spotify.com/api/token", {
-  //     method: "POST",
-  //     headers: {
-  //       Authorization: `Basic ${basicAuth}`,
-  //       "Content-Type": "application/x-www-form-urlencoded",
-  //     },
-  //     body: "grant_type=client_credentials",
-  //   });
-  //   const data = await response.json();
-  //   const accessToken = data.access_token;
-  //   const playlistResponse = await fetch(
-  //     "https://api.spotify.com/v1/playlists/6ZgP8m2OJnDiGC0xGt8y5g/tracks",
-  //     {
-  //       headers: {
-  //         Authorization: `Bearer ${accessToken}`,
-  //       },
-  //     }
-  //   );
-  //   const playlistData = await playlistResponse.json();
-  //   let playlist = playlistData.items
-  //     .map((item) => ({ url: item.track.preview_url, name: item.track.name }))
-  //     .filter((item) => item.url);
-  //   console.log(playlist);
-  //   setPlaylist(playlist);
-  // };
-  // const playSong = () => {
-  //   if (audioPlayer.paused) {
-  //     setPlaying(true);
-  //     audioPlayer.play();
-  //   } else {
-  //     setPlaying(false);
-  //     audioPlayer.pause();
-  //   }
-  // };
-  // function playSelectedSong() {
-  //   audioPlayer.src = playlist[currentSongIndex].url;
-  //   console.log("audio", audioPlayer);
-  //   audioPlayer.play();
-  // }
+  const changePlaying = () => {
+    if (!audioPlayer.src) {
+      playRandomSong();
+      setPlaying(true);
+      return;
+    }
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      setPlaying(true);
+    } else {
+      audioPlayer.pause();
+      setPlaying(false);
+    }
+  };
+  const fetchPlaylist = async () => {
+    const clientId = "b4ac466278f542e28f8deb3c3030c703";
+    const clientSecret = "ecd8d7bfea1d4da596b427f1b24e5b89";
+    const basicAuth = btoa(`${clientId}:${clientSecret}`);
+    const response = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basicAuth}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "grant_type=client_credentials",
+    });
+    const data = await response.json();
+    const accessToken = data.access_token;
+    const playlistResponse = await fetch(
+      "https://api.spotify.com/v1/playlists/6ZgP8m2OJnDiGC0xGt8y5g/tracks",
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      }
+    );
+    const playlistData = await playlistResponse.json();
+    playlist = playlistData.items
+      .map((item) => ({ url: item.track.preview_url, name: item.track.name }))
+      .filter((item) => item.url);
+  };
+  function playSelectedSong() {
+    audioPlayer.src = playlist[currentSongIndex].url;
+    audioPlayer.play();
+    setPlaying(true);
+  }
 
-  // function updateCurrentSong() {
-  //   setPlayingText(playlist[currentSongIndex].name);
-  // }
-  // const prevSong = () => {
-  //   if (playlist.length === 0) return;
-  //   currentSongIndex =
-  //     (currentSongIndex - 1 + playlist.length) % playlist.length;
-  //   updateCurrentSong();
-  //   playSelectedSong();
-  // };
-  // const playRandomSong = () => {
-  //   if (playlist.length === 0) return;
-  //   currentSongIndex = Math.floor(Math.random() * playlist.length);
-  //   updateCurrentSong();
-  //   playSelectedSong();
-  // };
+  function updateCurrentSong() {
+    setPlayingText(playlist[currentSongIndex].name);
+  }
+  const playRandomSong = () => {
+    if (playlist.length === 0) return;
+    currentSongIndex = Math.floor(Math.random() * playlist.length);
+    updateCurrentSong();
+    playSelectedSong();
+  };
+  const playPrevSong = () => {
+    if (playlist.length === 0) return;
+    currentSongIndex =
+      (currentSongIndex - 1 + playlist.length) % playlist.length;
+    updateCurrentSong();
+    playSelectedSong();
+  };
+  const playNextSong = () => {
+    if (playlist.length === 0) return;
+    currentSongIndex = (currentSongIndex + 1) % playlist.length;
+    updateCurrentSong();
+    playSelectedSong();
+  };
   const changePasswordHandler = (e) => {
     if (+e.target.value > 24) {
       setPasswordHelper("Maximum length is 24");
@@ -114,7 +118,6 @@ const Utilities = () => {
     const charset =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=";
     let password = "";
-    console.log(passwordNumber);
     if (+passwordNumber > 24) {
       return;
     }
@@ -135,16 +138,16 @@ const Utilities = () => {
       alert("Please enter a password length and generate one.");
     }
   };
-  // useEffect(() => {
-  //   fetchPlaylist();
-  // }, []);
+  useEffect(() => {
+    fetchPlaylist();
+  }, []);
   return (
     <div>
       <section id="projects" className="utils-section">
         <p className="section__text__p1">Play with my</p>
         <h1 className="title">Utilities</h1>
         <div className="main">
-          <ul className="cards">
+          <ul className="cards cards-util">
             <li className="cards_item item-util">
               <div className="util_card">
                 <div className="utils_content quote">
@@ -168,6 +171,38 @@ const Utilities = () => {
             <li className="cards_item item-util">
               <div className="util_card">
                 <div className="utils_content">
+                  <h2 className="card_title">Music player</h2>
+                  <div className="music-flex">
+                    <div className="music-name">
+                      <p>Current song: {playingText}</p>
+                    </div>
+                    <div className="music-icons">
+                      <i
+                        onClick={playPrevSong}
+                        className="fa-solid fa-backward-step"
+                      ></i>
+                      <i
+                        onClick={changePlaying}
+                        className={`fa-solid ${
+                          playing === true ? "fa-pause" : "fa-play"
+                        }`}
+                      ></i>
+                      <i
+                        onClick={playRandomSong}
+                        className="fa-solid fa-shuffle"
+                      ></i>
+                      <i
+                        onClick={playNextSong}
+                        className="fa-solid fa-forward-step"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li className="cards_item item-util">
+              <div className="util_card">
+                <div className="utils_content utils_notes">
                   <h2 className="card_title">Download your notes</h2>
                   <textarea
                     value={note}
