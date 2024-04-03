@@ -10,6 +10,7 @@ import Footer from "../../components/Footer";
 import Mode from "../../components/mode/mode";
 import Testimonials from "../../components/Testimonials";
 import { motion } from "framer-motion";
+import Utilities from "./../../components/Utilities";
 
 import "./Home.css";
 
@@ -42,6 +43,7 @@ const Home = () => {
             <Navbar />
             <Profile />
             <About />
+            <Utilities />
             <Experience />
             <Projects />
             <Testimonials />

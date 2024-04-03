@@ -40,6 +40,7 @@ html::-webkit-scrollbar {
   --icon-color: black;
   --timeline-text: green;
   --timeline-dot: limegreen;
+  --helper-text: #cacaca;
 }
 
 .dark-theme {
@@ -53,11 +54,12 @@ html::-webkit-scrollbar {
   --icon-color: white;
   --timeline-text: gold;
   --timeline-dot: rgb(255, 222, 37);
+  --helper-text: #333333;
 }
 
 * {
   background-color: var(--primary-bg-color);
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 
 p {
@@ -942,7 +944,8 @@ footer p {
   }
 }
 
-#projects .card {
+#projects .card,
+#projects .util_card {
   background-color: var(--text-color);
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.55);
@@ -959,6 +962,30 @@ footer p {
   padding: 1rem;
   background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
   background: var(--text-color);
+}
+
+#projects .util_card {
+  width: 550px;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#projects .utils_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
+  background: var(--text-color);
+}
+
+#projects .utils_content {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #projects .card_title {
@@ -979,11 +1006,31 @@ footer p {
   font-weight: 400;
   background-color: transparent !important;
 }
+
+.item-util {
+  height: 250px;
+}
+.quote .card_text {
+  color: var(--primary-bg-color) !important;
+  font-size: 1rem !important;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  background-color: transparent !important;
+}
 #projects .made_by {
   font-weight: 400;
   font-size: 13px;
   margin-top: 35px;
   text-align: center;
+}
+
+.utils-section {
+  height: 100% !important;
+  padding: 0 !important;
+}
+.utils-section .util_card {
+  box-shadow: none !important;
 }
 
 /*****************Testimonials*******************/
@@ -1108,5 +1155,145 @@ footer p {
   .snip1533 {
     max-width: 25%;
     min-width: 25%;
+  }
+}
+
+.music-card {
+  height: 100% !important;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.utility {
+  flex: 0 1 calc(50% - 10px);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  background-color: var(--text-color) !important;
+}
+@media screen and (max-width: 768px) {
+  .utility {
+    flex-basis: calc(100% - 20px);
+  }
+}
+.buttonmusic {
+  color: var(--primary-bg-color); /* White button text color */
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1.2em;
+  background-color: var(--text-color) !important;
+}
+#music-controls,
+#music-control button,
+#music-controls i,
+#music-controls svg {
+  background-color: var(--text-color) !important;
+}
+#music-player h2,
+#music-player button,
+#music-player i,
+#music-player p {
+  color: var(--primary-bg-color);
+}
+
+/* password-gen */
+.password-input {
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-input input {
+  width: 25%;
+  padding: 2% 2%;
+  background-color: inherit;
+  border: 1px solid var(--primary-bg-color) !important;
+  color: var(--primary-bg-color);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.password_helper {
+  color: var(--helper-text);
+  font-size: 1rem;
+}
+
+.password-result {
+  background-color: inherit;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.password-result p,
+.password-result i,
+.password-input svg {
+  background-color: var(--text-color);
+  color: var(--primary-bg-color);
+  margin: 0 0.5em;
+}
+
+.music-flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: inherit !important;
+}
+
+.music-name,
+.music-name p {
+  color: var(--helper-text);
+  width: 100%;
+  text-align: center;
+  background-color: inherit !important;
+}
+
+.music-icons,
+.music-icons i,
+.music-icons svg {
+  background-color: inherit !important;
+  color: var(--primary-bg-color);
+}
+.music-icons {
+  padding: 0 1em;
+}
+.music-icons i,
+.music-icons svg {
+  text-align: center;
+}
+
+.music-icons i {
+  transform: scale(1.8, 1.8);
+}
+
+.music-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utils_notes textarea{
+  width: 95% !important;
+}
+
+@media (min-width:300px) {
+  .cards-util {
+    justify-content: center !important;
   }
 }
