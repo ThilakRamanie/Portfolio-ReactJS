@@ -51,8 +51,8 @@ const Utilities = () => {
     }
   };
   const fetchPlaylist = async () => {
-    const clientId = "b4ac466278f542e28f8deb3c3030c703";
-    const clientSecret = "ecd8d7bfea1d4da596b427f1b24e5b89";
+    const clientId = import.meta.env.VITE_APP_CLIENT_ID;
+    const clientSecret = import.meta.env.VITE_APP_CLIENT_SECRET;
     const basicAuth = btoa(`${clientId}:${clientSecret}`);
     const response = await fetch("https://accounts.spotify.com/api/token", {
       method: "POST",

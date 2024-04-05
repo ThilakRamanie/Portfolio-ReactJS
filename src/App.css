@@ -1297,3 +1297,7 @@ footer p {
     justify-content: center !important;
   }
 }
+
+i:hover {
+  cursor: pointer;
+}
